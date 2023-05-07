@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --tableOdd-bg: rgba(6, 22, 27, 0.5);
+    --tableEven-bg: #06181C;
+    --button-bg: #065E7C;
+    --tableHeader-bg: #092D38;
+    --input-color: #7C7C8A;
+    --input-bg: #06181C;
+}
+
+
+body{
+    font-size: 1.6rem;
+    background-color: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+#app {
+    width: 112rem;
+}
+
+
+nav {
+    margin-top: 11.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    width: 64rem;
+    display: flex;
+    gap: .8rem;
+}
+
+#input-search {
+    width: 46.2rem;
+    height: 4.8rem;
+    background-color: var(--input-bg);
+    border: none;
+    padding: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+.input button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    width: 17rem;
+    height: 4.8rem;
+
+    background-color: var(--button-bg);
+    border-radius: .5rem;
+    
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.input button:hover {
+    background-color: #013f53;
+}
+
+
+main {
+    margin-top: 8.2rem;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+}
+
+table{
+    width: 111.8rem;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--tableHeader-bg);
+    height: 6.4rem;
+    
+}
+
+thead th:first-child {
+    width: 50.4rem;
+    border-top-left-radius: 1.2rem;
+}
+
+thead th:nth-child(2) {
+    width: 21.8rem;
+}
+
+thead th:nth-child(3) {
+    width: 22rem;
+}
+
+thead th:nth-child(4) {
+    width: 17.8rem;;
+}
+
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--tableEven-bg);
+}
+
+table td {
+    padding: 2.4rem;
+    text-align: center;
+}
+
+td.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+td.user a {
+    text-decoration: none;
+    color: white;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: hsla(355, 91%, 66%, 1);
+    cursor: pointer;
+}
+
+.remove:hover {
+    filter: brightness(1.5);
+}
